@@ -46,7 +46,7 @@ networks:
      container_name: shipping
      depends_on:
         -mysql
-        
+        -cart
 
 
 
