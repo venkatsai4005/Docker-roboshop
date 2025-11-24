@@ -9,40 +9,40 @@ networks:
      image: venkatsai4005/mongodb:v1
      container_name: mongodb
      catalogue:
-     image: venkatsai4005/catalogue:v1
-     container_name: catalogue
-     depends_on:
+      image: venkatsai4005/catalogue:v1
+      container_name: catalogue
+      depends_on:
         -mongodb
 
 
      redis:
-     image: venkatsai4005/redis:7
-     container_name: redis
+      image: venkatsai4005/redis:7
+      container_name: redis
 
 
      user:
-     image: venkatsai4005/user:v1
-     container_name: user
-     depends_on: 
+      image: venkatsai4005/user:v1
+      container_name: user
+      depends_on: 
         -mongodb
         -redis
 
      cart:
-     image: venkatsai4005/cart:v1
-     container_name: cart
-     depends_on:
+      image: venkatsai4005/cart:v1
+      container_name: cart
+      depends_on:
         -catalogue
         -redis
 
      mysql:
-     image: venkatsai4005/mysql:v1
-     container_name: mysql
+      image: venkatsai4005/mysql:v1
+      container_name: mysql
        
 
      shipping:
-     image: venkatsai4005/shipping:v1
-     container_name: shipping
-     depends_on:
+      image: venkatsai4005/shipping:v1
+      container_name: shipping
+      depends_on:
         -mysql
         -cart
 
