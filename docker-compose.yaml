@@ -8,7 +8,7 @@ services:
   mongodb:
     image: venkatsai4005/mongodb:v1
     container_name: mongodb
-    
+   
   catalogue:
     image: venkatsai4005/catalogue:v1
     container_name: catalogue
