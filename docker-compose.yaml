@@ -61,3 +61,16 @@ services:
      - rabbitmq
      - cart
      - user
+
+  frontend:
+    image: venkatsai4005/frontend:v1
+    container_name: frontend
+    ports:
+    - "80:80"  
+    depends_on:
+    - catalogue
+    - cart
+    - shipping
+    - user
+    - payment
+     
