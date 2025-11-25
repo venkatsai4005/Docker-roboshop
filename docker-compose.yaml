@@ -58,6 +58,6 @@ services:
       USER_PORT: 8080
       AMQP_HOST: rabbitmq
     depends_on:
-     -rabbitmq
-     -cart
-     -user
+     - rabbitmq
+     - cart
+     - user
